@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="ind.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+  	var function1=function(){
+  		
+  		if(window.innerWidth>680) {
+  		$("#fash").animate({
+  			width:"80%",
+  			marginLeft:"10%",
+  			fontSize:"1.6em"
+  		}, "slow" );
+  		$("#manj").animate({
+  			height:"380px",
+  			marginTop:"100px"
+  		}, "1000");
+  	}
+  	else {
+  		$("#qi").css("text-align","left");
+  		$("#fash").animate({
+  			width:"80%",
+  			marginLeft:"10%",
+  			fontSize:"1.2em",
+
+  		}, "slow" );
+  		$("#manj").animate({
+  			height:"300px",
+  			marginTop:"65px"
+  		}, "1000");
+  	}
+  	};
+  </script>
+</head>
+<body id="mainfile" onload="function1();">
+	<div class="container details">
+		<div class="row">
+			<div class="col-sm-12 navco fixed-top">
+				<nav class="container navbar navbar-expand-md">
+  <a class="navbar-brand" href="#"><img src="logo.png" height="40px" width="180px" alt="hjk"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span><i class="fa fa-bars" style="font-size:36px;color:red"></i></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+					<li class="nav-item">
+      <a class="nav-link text-light active" href="#personalDetails" role="button" onclick="persDetailF()">Personal Details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" id="aob" href="#objective" onclick="objectF()">Ojective</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#experience" onclick="experiF()">Experience</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#education" onclick="schoolF()">Education</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#skills" onclick="skillF()">Skills</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#addinfo" onclick="adInfo()">Additional Information</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#awards" onclick="awardF()">Awards</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#certi" onclick="certiF()">Certification/Licences</a>
+    </li>
+
+				</ul>
+			</div>
+			</nav>
+			</div>
+		</div>
+		<div class="row jagqr">
+			<div class="col-sm-6">
+				<div id="fash">
+				 <p id="qi">"The better Resume can make your future better.
+				 <br/>
+				 So come with us and build your resume online
+				  in few seconds with few easy steps"</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<img src="man.png" alt="ghj" id="manj"/>
+			</div>
+		</div>
+		<div class="row" id="personalDetails">
+			
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Personal Details</h1>
+					</div>
+				</div>
+				<form>
+				<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" title="Must in the format of (Name Middle Title) or (Name Title) Don't give any whitespace after your full name" pattern="^[A-Z][a-z]+(\s[A-Z][a-z]+)+$" required>
+    </div>    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address" required>
+    </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter Phone" name="phone" pattern="^[+][0-9]+\s[0-9]+$" title="Please enter number with country code like +91 2334347898" required>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="pdemail">Email:</label>
+      <input type="email" class="form-control" id="pdemail" placeholder="Enter email" name="pdemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Must in the format of email-id like example@email.com" required>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="web">Web:</label>
+      <input type="text" class="form-control" id="web" placeholder="Enter web" name="web" title="Please input in format of www.example.com" pattern="/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i" required>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Submit</button>
+			</div>
+		</div>
+</form>
+			</div>
+		</div>
+		<div class="row" id="objective" style="display:none;">
+			<form>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Objective</h1>
+					</div>
+				</div>
+			<div class="col-sm-12">
+				<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="objec">Objective:</label>
+      <textarea name="objec" id="objec" class="form-control" rows="5" required></textarea>
+    </div>    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Submit</button>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+
+		<div class="row" id="experience" style="display:none;">
+			<form>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Experience</h1>
+					</div>
+				</div>
+			<div class="col-sm-12">
+				<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="jobtile">Job Title:</label>
+      <input type="text" class="form-control" id="jobtile" placeholder="Enter Job Title" name="jobtile" required>
+    </div>    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="ccCheck" onclick="cCheck()">
+  <label class="form-check-label" for="ccCheck">
+    I currently work here
+  </label>
+</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+      <label>Start date(MM / YYYY):</label>
+      <div class="TextInput" id="texInput"><input min="1" class="myind-DateRange-month" placeholder="MM" max="12" maxlength="2" type="number" name="esdm" id="esdm" value="" required>/<input id="esdy" class="yearend" placeholder="YYYY" maxlength="4" min="1950" max="9999" name="esdy" type="number" value="" required></div>
+    </div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group" id="eph">
+      <label>End Date(MM / YYYY):</label>
+      <div class="TextInput" id="texInput2"><input min="1" id="eldm" class="myind-DateRange-month" placeholder="MM" max="12" maxlength="2" name="eldm" type="number" value="">/<input id="eldy" class="yearend" placeholder="YYYY" maxlength="4" max="9999" name="eldy" type="number" value=""></div>
+    </div>
+    <span class="iphere" id="eiphere"><strong>to Present</strong></span>
+    </div>
+		</div>
+	
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="comname">Company name:</label>
+      <input type="text" class="form-control" id="comname" placeholder="Enter company name" name="comname" required>
+    </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="jobloc">Location:</label>
+      <input type="text" class="form-control" id="jobloc" placeholder="Enter Job location" name="jobloc" required>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="descri">Description:</label>
+      <textarea class="form-control" id="descri" name="descri" required></textarea>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Add+</button>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+
+				<div class="row" id="education" style="display:none;">
+					<form>
+					<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Education</h1>
+					</div>
+				</div>
+			<div class="col-sm-12">
+				<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="school">School:</label>
+      <input type="text" class="form-control" id="school" placeholder="Enter School Name" name="school" required>
+    </div>    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="scCheck" onclick="sCheck()">
+  <label class="form-check-label" for="scCheck">
+    Attending here
+  </label>
+</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+      <label>Start date(MM / YYYY):</label>
+      <div class="TextInput" id="stexInput"><input min="1" class="myind-DateRange-month" placeholder="MM" max="12" maxlength="2" type="number" name="ssdm" id="ssdm" value="" required>/<input id="ssdy" class="yearend" placeholder="YYYY" maxlength="4" min="1950" max="9999" name="ssdy" type="number" value="" required></div>
+    </div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group" id="sph">
+      <label>End Date(MM / YYYY):</label>
+      <div class="TextInput" id="stexInput2"><input min="1" id="sldm" class="myind-DateRange-month" placeholder="MM" max="12" maxlength="2" name="sldm" type="number" value="">/<input id="sldy" class="yearend" placeholder="YYYY" maxlength="4" max="9999" name="sldy" type="number" value=""></div>
+    </div>
+    <span class="iphere" id="siphere"><strong>to Present</strong></span>
+    </div>
+		</div>
+	
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="degree">Degree:</label>
+      <select class="form-select form-control" name="degree" aria-label="Default select example" required>
+  <option selected value="">None</option>
+  <option value="1">High School or Equivalent</option>
+  <option value="2">Associate</option>
+  <option value="3">Bachelor's</option>
+  <option value="2">Master's</option>
+  <option value="3">Doctorate</option>
+  <option value="2">Other</option>
+</select>
+    </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="fos">Feild of Study:</label>
+      <input type="text" class="form-control" id="fos" placeholder="Enter Field of study" name="fos" required>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="scloc">Location:</label>
+      <input type="text" class="form-control" id="scloc" placeholder="Enter school location" name="scloc" required>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Add+</button>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+
+		<div class="row" id="skills" style="display:none;">
+			<form>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Skills</h1>
+					</div>
+				</div>
+			<div class="col-sm-12">
+				<div class="row">
+			<div class="col-sm-9">
+				<div class="form-group">
+      <label for="skill">Skills:</label>
+      <input name="skill" id="skill" class="form-control" placeholder="Enter skill" required>
+    </div>    
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+      <label for="yoe">Year of Experience:</label>
+      <select class="form-select form-control" name="yoe" aria-label="Default select example" required>
+  <option selected value="">-------</option>
+  <option value="1">1 year</option>
+  <option value="2">2 year</option>
+  <option value="3">3 years</option>
+  <option value="4">4 years</option>
+  <option value="5">5 years</option>
+  <option value="6">6 years</option>
+  <option value="7">7 years</option>
+  <option value="8">8 years</option>
+  <option value="9">9 years</option>
+  <option value="10">10 years</option>
+  <option value="11">10+ years</option>
+</select>
+    </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Add+</button>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+
+		<div class="row" id="addinfo" style="display:none;">
+			<form>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Additional Informations</h1>
+					</div>
+				</div>
+			<div class="col-sm-12">
+				<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="adinfo">Additional Information:</label>
+      <textarea name="adinfo" id="adinfo" class="form-control" rows="5" required></textarea>
+    </div>    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Submit</button>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+		<div class="row" id="awards" style="display:none;">
+			<form>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Awards</h1>
+					</div>
+				</div>
+			<div class="col-sm-12">
+				<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="award">Awards:</label>
+      <input type="text" class="form-control" id="award" placeholder="Enter Awards" name="award" required>
+    </div>    
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label>Date Awarded:</label>
+      <div class="TextInput" id="atexInput"><input min="1" class="myind-DateRange-month" placeholder="MM" max="12" maxlength="2" type="number" name="adm" id="adm" value="" required>/<input id="ady" class="yearend" placeholder="YYYY" maxlength="4" min="1950" max="9999" name="ady" type="number" value="" required></div>
+    </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="adescri">Description:</label>
+      <textarea class="form-control" id="adescri" name="adescri" required></textarea>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Add+</button>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+        <div class="row" id="certi" style="display:none;">
+        	<form onsubmit="return fcldy()">
+        	<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12 hol">
+						<h1>Certificate/ Lisence</h1>
+					</div>
+				</div>
+			<div class="col-sm-12">
+				<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="certili">Certificate/ License:</label>
+      <input type="text" class="form-control" id="certili" placeholder="Enter your certificates/License" name="certili" required>
+    </div>    
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+      <label>Start date(MM / YYYY):</label>
+      <div class="TextInput" id="ctexInput"><input min="1" class="myind-DateRange-month" placeholder="MM" max="12" maxlength="2" type="number" name="csdm" id="csdm" value="" required>/<input id="csdy" class="yearend" placeholder="YYYY" maxlength="4" min="1950" max="9999" name="csdy" type="number" value="" required></div>
+    </div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+      <label>End Date(MM / YYYY):</label>
+      <div class="TextInput" id="ctexInput2"><input min="1" id="cldm" class="myind-DateRange-month" placeholder="MM" max="12" maxlength="2" name="cldm" type="number" value="" required>/<input id="cldy" class="yearend" placeholder="YYYY" maxlength="4" min="1950" name="cldy" type="number" value="" required></div>
+    </div>
+    </div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+      <label for="cldescri">Description:</label>
+      <textarea class="form-control" id="cldescri" name="cldescri" required></textarea>
+    </div>
+    
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary bton">Add+</button>
+			</div>
+		</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+
+	</div>
+	<script type="text/javascript">
+		
+		function persDetailF() {
+			document.getElementById("personalDetails").style.display='block';
+			document.getElementById("objective").style.display='none';
+			document.getElementById('experience').style.display='none';
+			document.getElementById('education').style.display='none';
+			document.getElementById('skills').style.display="none";
+			document.getElementById('addinfo').style.display="none";
+			document.getElementById('awards').style.display="none";
+			document.getElementById('certi').style.display="none";
+		}
+		function objectF() {
+			document.getElementById("personalDetails").style.display='none';
+			document.getElementById("objective").style.display='block';
+			document.getElementById('experience').style.display='none';
+			document.getElementById('education').style.display='none';
+			document.getElementById('skills').style.display="none";
+			document.getElementById('addinfo').style.display="none";
+			document.getElementById('awards').style.display="none";
+			document.getElementById('certi').style.display="none";
+		}
+		function experiF() {
+			document.getElementById("personalDetails").style.display='none';
+			document.getElementById("objective").style.display='none';
+			document.getElementById('experience').style.display='block';
+			document.getElementById('education').style.display='none';
+			document.getElementById('skills').style.display="none";
+			document.getElementById('addinfo').style.display="none";
+			document.getElementById('awards').style.display="none";
+			document.getElementById('certi').style.display="none";
+		}
+		function schoolF() {
+			document.getElementById("personalDetails").style.display='none';
+			document.getElementById("objective").style.display='none';
+			document.getElementById('experience').style.display='none';
+			document.getElementById('education').style.display='block';
+			document.getElementById('skills').style.display="none";
+			document.getElementById('addinfo').style.display="none";
+			document.getElementById('awards').style.display="none";
+			document.getElementById('certi').style.display="none";
+		}
+		function skillF() {
+			document.getElementById("personalDetails").style.display='none';
+			document.getElementById("objective").style.display='none';
+			document.getElementById('experience').style.display='none';
+			document.getElementById('education').style.display='none';
+			document.getElementById('skills').style.display="block" ;
+			document.getElementById('addinfo').style.display="none";
+			document.getElementById('awards').style.display="none";
+			document.getElementById('certi').style.display="none";
+		}
+		function adInfo() {
+			document.getElementById("personalDetails").style.display='none';
+			document.getElementById("objective").style.display='none';
+			document.getElementById('experience').style.display='none';
+			document.getElementById('education').style.display='none';
+			document.getElementById('skills').style.display="none" ;
+			document.getElementById('addinfo').style.display="block";
+			document.getElementById('awards').style.display="none";
+			document.getElementById('certi').style.display="none";
+		}
+		function awardF() {
+			document.getElementById("personalDetails").style.display='none';
+			document.getElementById("objective").style.display='none';
+			document.getElementById('experience').style.display='none';
+			document.getElementById('education').style.display='none';
+			document.getElementById('skills').style.display="none" ;
+			document.getElementById('addinfo').style.display="none";
+			document.getElementById('awards').style.display="block";
+			document.getElementById('certi').style.display="none";
+		}
+		function certiF() {
+			document.getElementById("personalDetails").style.display='none';
+			document.getElementById("objective").style.display='none';
+			document.getElementById('experience').style.display='none';
+			document.getElementById('education').style.display='none';
+			document.getElementById('skills').style.display="none" ;
+			document.getElementById('addinfo').style.display="none";
+			document.getElementById('awards').style.display="none";
+			document.getElementById('certi').style.display="block";
+		}
+		document.getElementById("ady").onfocusin=function() {asinputDate()};
+		document.getElementById("adm").onfocusin=function() {asinputDate()};
+		document.getElementById("adm").onfocusout=function() {asinout()};
+		document.getElementById("ady").onfocusout=function() {asinout()};
+			
+		function asinputDate() {
+			document.getElementById('atexInput').style.border='1px solid #86b7fe';
+			document.getElementById('atexInput').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+		}
+		function asinout() {
+			document.getElementById('atexInput').style.border='1px solid #ccc';
+			document.getElementById('atexInput').style.boxShadow='none';
+		}
+
+		document.getElementById("esdy").onfocusin=function() {esinputDate()};
+		document.getElementById("esdm").onfocusin=function() {esinputDate()};
+		document.getElementById("esdm").onfocusout=function() {esinout()};
+		document.getElementById("esdy").onfocusout=function() {esinout()};
+			
+		function esinputDate() {
+			document.getElementById('texInput').style.border='1px solid #86b7fe';
+			document.getElementById('texInput').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+		}
+		function esinout() {
+			document.getElementById('texInput').style.border='1px solid #ccc';
+			document.getElementById('texInput').style.boxShadow='none';
+		}
+
+		document.getElementById("eldm").onfocusin=function() {elinputDate()};
+		document.getElementById("eldy").onfocusin=function() {elinputDate()};
+		document.getElementById("eldm").onfocusout=function() {elinout()};
+		document.getElementById("eldy").onfocusout=function() {elinout()};
+			
+		function elinputDate() {
+			document.getElementById('texInput2').style.border='1px solid #86b7fe';
+			document.getElementById('texInput2').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+		}
+		function elinout() {
+			document.getElementById('texInput2').style.border='1px solid #ccc';
+			document.getElementById('texInput2').style.boxShadow='none';
+		}
+		document.getElementById("csdy").onfocusin=function() {csinputDate()};
+		document.getElementById("csdm").onfocusin=function() {csinputDate()};
+		document.getElementById("csdm").onfocusout=function() {csinout()};
+		document.getElementById("csdy").onfocusout=function() {csinout()};
+			
+		function csinputDate() {
+			document.getElementById('ctexInput').style.border='1px solid #86b7fe';
+			document.getElementById('ctexInput').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+		}
+		function csinout() {
+			document.getElementById('ctexInput').style.border='1px solid #ccc';
+			document.getElementById('ctexInput').style.boxShadow='none';
+		}
+
+		document.getElementById("cldm").onfocusin=function() {clinputDate()};
+		document.getElementById("cldy").onfocusin=function() {clinputDate()};
+		document.getElementById("cldm").onfocusout=function() {clinout()};
+		document.getElementById("cldy").onfocusout=function() {clinout()};
+			
+		function clinputDate() {
+			document.getElementById('ctexInput2').style.border='1px solid #86b7fe';
+			document.getElementById('ctexInput2').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+		}
+		function clinout() {
+			document.getElementById('ctexInput2').style.border='1px solid #ccc';
+			document.getElementById('ctexInput2').style.boxShadow='none';
+		}
+
+		document.getElementById("ssdy").onfocusin=function() {ssinputDate()};
+		document.getElementById("ssdm").onfocusin=function() {ssinputDate()};
+		document.getElementById("ssdm").onfocusout=function() {ssinout()};
+		document.getElementById("ssdy").onfocusout=function() {ssinout()};
+			
+		function ssinputDate() {
+			document.getElementById('stexInput').style.border='1px solid #86b7fe';
+			document.getElementById('stexInput').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+		}
+		function ssinout() {
+			document.getElementById('stexInput').style.border='1px solid #ccc';
+			document.getElementById('stexInput').style.boxShadow='none';
+		}
+
+		document.getElementById("sldm").onfocusin=function() {slinputDate()};
+		document.getElementById("sldy").onfocusin=function() {slinputDate()};
+		document.getElementById("sldm").onfocusout=function() {slinout()};
+		document.getElementById("sldy").onfocusout=function() {slinout()};
+			
+		function slinputDate() {
+			document.getElementById('stexInput2').style.border='1px solid #86b7fe';
+			document.getElementById('stexInput2').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+		}
+		function slinout() {
+			document.getElementById('stexInput2').style.border='1px solid #ccc';
+			document.getElementById('stexInput2').style.boxShadow='none';
+		}
+		function sCheck() {
+			var checkBox=document.getElementById('scCheck');
+			if(checkBox.checked) {
+				document.getElementById('scCheck').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+				document.getElementById('sph').style.display='none';
+			document.getElementById('siphere').style.display='block';
+		} else {
+			document.getElementById('scCheck').style.boxShadow='none';
+			document.getElementById('sph').style.display='block';
+			document.getElementById('siphere').style.display='none';
+		}
+			
+		}
+		function cCheck() {
+			var checkBox=document.getElementById('ccCheck');
+			if(checkBox.checked) {
+				document.getElementById('ccCheck').style.boxShadow='0 0 0 0.20rem rgba(13, 110, 253, 0.25)';
+			document.getElementById('eph').style.display='none';
+			document.getElementById('eiphere').style.display='block';
+		} else {
+			document.getElementById('ccCheck').style.boxShadow='none';
+			document.getElementById('eph').style.display='block';
+			document.getElementById('eiphere').style.display='none';
+		}
+		}
+		var d= new Date();
+		document.getElementById("cldy").max = d.getFullYear();
+		document.getElementById("eldy").max = d.getFullYear();
+		document.getElementById("ady").max = d.getFullYear();
+		document.getElementById("csdy").max = d.getFullYear();
+		document.getElementById("esdy").max = d.getFullYear();
+		document.getElementById("ssdy").max = d.getFullYear();
+		
+		var amyInput= document.getElementById('ady');
+		amyInput.onkeyup = function() {
+			if(document.getElementById("ady").value.match(d.getFullYear())) {
+				document.getElementById("adm").max=d.getMonth()+1;
+			}
+		}
+		var clmyInput= document.getElementById('cldy');
+		clmyInput.onkeyup = function() {
+			if(document.getElementById("cldy").value.match(d.getFullYear())) {
+				document.getElementById("cldm").max=d.getMonth()+1;
+			}
+		}
+		var csmyInput= document.getElementById('csdy');
+		csmyInput.onkeyup = function() {
+			if(document.getElementById("csdy").value.match(d.getFullYear())) {
+				document.getElementById("csdm").max=d.getMonth()+1;
+			}
+		}
+		var elmyInput= document.getElementById('eldy');
+		elmyInput.onkeyup = function() {
+			if(document.getElementById("eldy").value.match(d.getFullYear())) {
+				document.getElementById("eldm").max=d.getMonth()+1;
+			}
+		}
+		var esmyInput= document.getElementById('esdy');
+		esmyInput.onkeyup = function() {
+			if(document.getElementById("esdy").value.match(d.getFullYear())) {
+				document.getElementById("esdm").max=d.getMonth()+1;
+			}
+		}
+		var ssmyInput= document.getElementById('ssdy');
+		ssmyInput.onkeyup = function() {
+			if(document.getElementById("ssdy").value.match(d.getFullYear())) {
+				document.getElementById("ssdm").max=d.getMonth()+1;
+			}
+		}
+			
+		
+	
+		
+		
+	</script>
+		}
+</body>
+</html>
